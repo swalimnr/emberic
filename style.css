@@ -1,0 +1,608 @@
+/* reset here */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* s-animation  */
+
+.s-animate{
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show{
+   opacity: 1;
+   filter: blur(0);
+   transform: translatex(0);
+   animation: fadeup 2s forwards ;
+}
+canvas { 
+   overflow: hidden;
+   width:100vw;
+   height:100vh;
+   background-color:black;
+}
+
+ /* header */
+ .container{
+    display: grid;
+    grid: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 90vh 92vh 35vh 35vh ;
+    grid-template-areas: "logo nav-bar nav-bar"
+                         "anni-text slider slider"
+                         "summary summary summary"
+                         "sub-brand sub-brand sub-brand"
+                         "footer footer footer";
+    background: linear-gradient(153deg, rgb(42, 39, 105) 0%, rgb(138, 138, 222) 55%, rgba(0,212,255,1) 100%);
+ }
+ .logo{
+    grid-area: logo;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   position: relative;
+  
+   
+    
+ }
+ .logo a{
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+ }
+ .logo span{
+   color: rgb(252, 53, 53);
+ }
+ .logo span:hover{
+   color: blue;
+ }
+ .nav-bar{
+    grid-area: nav-bar;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    
+  
+ }
+ .nav-bar nav{
+   display: flex;
+   flex-direction: row;
+  
+      
+ }
+ .nav-bar nav a{
+   list-style: none;
+   text-decoration: none;
+   color: rgb(239, 239, 239);
+   margin-right: 15px;
+   margin-bottom: 0px;
+   padding: 5px  ;
+
+ }
+ .nav-bar a.active,.nav-bar a:hover {
+  border-bottom: 1px solid rgb(234, 255, 0);
+   border-radius: 10px;
+  
+   
+   
+  
+ }
+.s-title{
+   font-size: 17px;
+   font-weight: 100;
+   letter-spacing: 2px;
+   line-height: 25px;
+   margin: 0;
+   color: rgb(187, 187, 187);
+   /* animation:  fadeup 2s forwards ; */
+}
+.mine-title{
+   font-size: 50px;
+   text-transform: uppercase;
+   color: white;
+  
+   
+}
+.anni-text p{
+   color: white;
+}
+@keyframes fadeIne{
+   from{
+      opacity: 0;
+      transform: translateX(-30%);
+   }to{
+      opacity: 1;
+      transform: translateX(0);
+   }
+ }
+ @keyframes fadeup{
+   from{
+      opacity: 0;
+      transform: translatey(-30%);
+   }to{
+      opacity: 1;
+      transform: translateX(0);
+   }
+ }
+.mine-title span{
+   font-weight: 200;
+   /* animation: fadeup 3.5s forwards ; */
+}
+ .anni-text{
+    grid-area: anni-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 30%;
+    line-height: normal;
+    /* animation: fadeup 3s forwards ; */
+   
+       
+ }
+ .anni-text p{
+   margin-top: 10px;
+   max-width: 480px;
+   font-size: 20px;
+  
+ }
+
+.anni-text button{
+   width: 100px;
+   height: 45px;
+   border-radius: 8px;
+   font-size: 15px;
+  margin-top: 20px;
+ margin-left: 80px;
+   
+
+  
+}.anni-text button:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+
+.anni-text button i{
+   font-size: 18px;
+   display: none;
+   line-height: 25px;
+   cursor: pointer;
+   animation:  fadeIne 3s forwards ;
+   
+}
+.anni-text button:hover i{
+   font-size: 18px;
+   display: block;
+ 
+    
+}
+.anni-text button a{
+  text-decoration: none;
+  color: black;
+}
+.anni-text button a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+
+ .Slider{
+    grid-area: slider;
+    
+    margin: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+ }
+ .Slider .slide-annimation{
+ 
+   width: 570px;
+   height: 300px;
+   border-radius: 20px;
+   margin-bottom: 90px;
+   background-position: center;
+   background-size:cover ;
+   background-repeat: no-repeat;
+
+   animation: slideShow 15s infinite;
+ }
+
+
+ @keyframes slideShow {
+   0% {
+     background-image: url('/img/CODING-AND-GRAPHICS-HUB.png');
+   }
+   33.33% {
+     background-image: url('/img/edge-of-art-new-png.png');
+   }
+   66.66% {
+     background-image: url('/img/edge-of-art-room\ -\ Copy.png');
+   }
+   100% {
+     background-image: url('/img/ember-new.jpg');
+   }
+ }
+
+ 
+
+ .summary{
+    grid-area: summary;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+
+ }
+ .summary .mine-title{
+   /* animation: fadeIne 2s forwards; */
+   padding-bottom: 40px;
+   color: white;
+ }
+ .bold-text{
+   font-size: 20px ;
+   padding-bottom: 10px;
+   
+ }
+ .summary .icon-card{
+ background-color: rgb(0, 0, 0);
+  width:300px ;
+  height: 300px;
+  border-radius: 18px;
+  padding: 10px;
+  margin:30px 30px;
+  color: rgb(184, 178, 178);
+  /* animation: fadeup 2s forwards; */
+  
+}
+ .icon-promo{
+   display: flex;
+   flex-direction: row;
+   
+ }
+ .icon-promo 
+.dis{
+  max-height: 80px;
+  overflow: visible;
+
+ }
+ .icon-card a{
+  width: 50%;
+background-color: rgb(169, 169, 169);
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  margin-top: 80px;
+  cursor: pointer;
+  
+ }
+ .icon-card a:hover{
+  background-color: white;
+  transition: 1s ease-in-out;
+
+ }
+ .icon-card .icon{
+   width: 50px;
+   height: 50px;
+   background-color: yellow;
+   border-radius: 50%;
+   margin-bottom: 10px;
+   background-image: url(./img/ember-new.jpg);
+   background-size: cover ;    
+    background-position: center ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    
+ }
+ .icon-card .icon-1{
+   width: 50px;
+   height: 50px;
+  
+   border-radius: 50%;
+   margin-bottom: 10px;
+   background-image: url(./img/edge-of-art-new-png.png);
+   background-size: cover ;    
+    background-position: center ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+ }
+ .icon-card .icon-2{
+   width: 50px;
+   height: 50px;
+   background-color: yellow;
+   border-radius: 50%;
+   margin-bottom: 10px;
+   background-image: url(./img/CODING-AND-GRAPHICS-HUB.png);
+   background-size: cover ;    
+    background-position: center ;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+ }
+ .icon-2:hover{
+   filter: grayscale(0);
+ }
+ 
+ 
+ .icon-card:hover .icon{
+   
+   filter: grayscale(0);   
+ }
+ .icon-card:hover .icon-1{
+   
+   filter: grayscale(0);
+ }
+ .icon-card:hover .icon-2{
+   
+   filter: grayscale(0);
+ }
+ .sub-brand{
+    grid-area: sub-brand;
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+   
+  
+ }
+ .sub-brand .quats{
+  font-size: 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  
+  
+ }
+ .sub-brand .author{
+  position: relative;
+  top: 50px;
+  line-height: 40px;
+  color: rgb(221, 221, 221);
+  font-size: 18px;
+ }
+
+ 
+ 
+ /* p a:hover { color: red; } */
+ .footer{
+  grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+ }
+ .footer .logo{
+  display: flex;
+  justify-content: start;
+  margin: 10px 10px 10px 100px;
+ }
+ .footer .brand-dis-1{
+  max-width: 400px;
+  margin: 10px 10px 10px 100px;
+ }
+ .footer .social-icon{
+  margin: 10px 10px 10px 100px;
+
+   
+ }
+ .footer .social-icon i{
+  margin-left: 30px;
+  margin-top: 30px;
+  color: white;
+ }
+ .footer .social-icon i:hover{
+  color: gray;
+ }
+ .footer .sec-2 {
+  margin-top:30px;
+ } 
+ .footer .links h3 {
+   font-size: 23px;
+   margin-bottom: 10px;
+ }
+ .footer .sec-2 a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  
+ 
+ }
+ .footer .sec-3{
+  max-width: 600px;
+  margin: 60px 10px 10px 100px;
+ }
+ .footer .links{
+  display: flex;
+  flex-direction: column;
+  
+  }
+
+ /* about css */
+ .active{
+  border-bottom: 4px solid rgb(229, 244, 21);
+   border-radius: 10px;
+ }
+ 
+
+
+
+ /* mobile view */
+ @media only screen and (max-width:600px) {
+  /* For mobile phones: */
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+  .container{
+    display: grid;
+    grid: wrap;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 10vh auto auto auto auto auto ;
+    grid-template-areas: "logo nav-bar nav-bar"
+                         "anni-text anni-text anni-text"
+                         "slider slider slider"
+                         "summary summary summary"
+                         "sub-brand sub-brand sub-brand"
+                         "footer footer footer";
+    background: linear-gradient(153deg, rgb(42, 39, 105) 0%, rgb(138, 138, 222) 55%, rgba(0,212,255,1) 100%);
+ }
+ .anni-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding:5px;
+  line-height: normal;
+  margin-top: 15px;
+ }
+ .logo{
+  grid-area: logo;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+ justify-content:start;
+ padding-left: 10px; 
+}
+.nav-bar{
+  grid-area: nav-bar;
+  font-size: 13px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: static;
+  
+
+}
+.Slider{
+  grid-area: slider;
+  
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+ 
+}
+
+.summary{
+  grid-area: summary;
+  display: flex;
+  align-items: center;
+  justify-content: start  ;
+  flex-direction: column;
+
+}
+.summary .mine-title{
+ /* animation: fadeIne 2s forwards; */
+padding: 10px;
+ color: white;
+}
+.bold-text{
+ font-size: 17px ;
+
+ 
+}
+.icon-promo{
+  display: flex;
+  flex-direction:column;
+  
+}
+.sub-brand {
+  display: flex;
+  align-items: start;
+  justify-items: center;
+  padding: 20px;
+}
+.sub-brand .quats{
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  
+  
+ }
+ .sub-brand .author{
+  position: relative;
+  color: rgb(221, 221, 221);
+  font-size: 10px;
+  margin-bottom: 30px;
+ }
+ .footer{
+  
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction:column;
+  align-items:start;
+ padding: 10px;
+  
+}
+.footer .sec-1{
+margin: 0;
+}
+.footer .logo-s1{
+display: flex;
+justify-content: start;
+margin: 10px 0px 10px 100px;
+}
+.footer .brand-dis-1{
+margin: 20px;
+
+}
+.footer .social-icon{
+margin: 10px 10px 10px 100px;
+
+ 
+}
+.footer .social-icon i{
+padding-left: 20px;
+color: rgb(255, 255, 255);
+
+
+
+}
+.footer .social-icon i:hover{
+color: gray;
+}
+.footer .sec-2 {
+
+margin: 20px;
+} 
+.footer .links h3 {
+ font-size: 23px;
+ 
+ 
+
+}
+.footer .links{
+display: flex;
+flex-direction: column;
+
+}
+.footer .sec-3{
+max-width: 600px;
+margin: 20px;
+}
+
+
+
+
+
+}
